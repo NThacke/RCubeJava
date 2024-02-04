@@ -22,6 +22,7 @@ public class Main {
 
         try {
             t.join();
+            timer.cancel();
         }
         catch(Exception e) {
             e.printStackTrace();
