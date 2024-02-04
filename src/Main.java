@@ -1,5 +1,6 @@
 import model.Model;
 import model.State;
+import model.Util;
 
 import java.util.*;
 
@@ -31,6 +32,10 @@ public class Main {
         System.out.println(m.time() + " ms");
         System.out.println(m.start());
         System.out.println(m.finish());
+
+        for(Util.Move move : m.moves()) {
+            System.out.println(move);
+        }
 
     }
 }

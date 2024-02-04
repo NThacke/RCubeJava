@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class Model implements Runnable {
+public class Model implements Runnable, Util {
 
     private List<State> visited;
     private State finish;
@@ -58,5 +58,9 @@ public class Model implements Runnable {
 
     public State start() {
         return st;
+    }
+
+    public List<Move> moves() {
+        return finish.getCube().moves;
     }
 }

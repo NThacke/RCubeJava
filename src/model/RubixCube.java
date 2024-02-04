@@ -137,6 +137,9 @@ public class RubixCube implements Util {
     void addMove(Move move) {
         moves.add(move);
     }
+    public List<Move> moves() {
+        return moves;
+    }
     /**
      * A list of rubix cubes that are directly obtainable (i.e., one move away) from this rubix cube.
      * @return

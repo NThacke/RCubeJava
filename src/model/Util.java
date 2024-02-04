@@ -33,5 +33,45 @@ public abstract interface Util {
             this.color = c;
             this.direction = d;
         }
+
+        public String toString() {
+            StringBuilder s = new StringBuilder();
+            switch(color) {
+                case WHITE : {
+                    s.append("WHITE : ");
+                    break;
+                }
+                case ORANGE : {
+                    s.append("ORANGE : ");
+                    break;
+                }
+                case YELLOW : {
+                    s.append("YELLOW : ");
+                    break;
+                }
+                case BLUE : {
+                    s.append("BLUE : ");
+                    break;
+                }
+                case RED : {
+                    s.append("RED : ");
+                    break;
+                }
+                case GREEN : {
+                    s.append("GREEN : ");
+                }
+            }
+            switch(direction) {
+                case CW : {
+                    s.append("Clockwise");
+                    break;
+                }
+                case CCW : {
+                    s.append("Counter-clockwise");
+                    break;
+                }
+            }
+            return s.toString();
+        }
     }
 }
