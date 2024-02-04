@@ -106,7 +106,8 @@ public class RubixCube implements Util {
      * @return
      */
     public int h() {
-        return h1();
+        return 0;
+//        return h1();
     }
 
     public String toString() {

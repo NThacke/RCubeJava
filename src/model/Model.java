@@ -6,6 +6,8 @@ import java.util.PriorityQueue;
 
 public class Model implements Runnable, Util {
 
+    long cnt;
+
     private List<State> visited;
     private State finish;
     private State st;
@@ -32,6 +34,7 @@ public class Model implements Runnable, Util {
         frontier.add(current);
         while(!current.equals(State.goal)) {
             current = frontier.poll();
+            cnt++;
             for(State child : current.children()) {
                 if(!visited(child)) {
                     visited.add(child);
@@ -53,7 +56,7 @@ public class Model implements Runnable, Util {
     }
 
     public long count() {
-        return this.visited.size();
+        return cnt;
     }
 
     public State start() {
